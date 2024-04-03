@@ -1,42 +1,32 @@
 /**
- * Write a description of class GroundTransportation here.
+ * Write a description of class Lorry here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class GroundTransportation extends Transport
-{
+public class Lorry extends GroundTransportation {
     
-    protected String licensePlate;
-    private final double FEES = 0.03;
-
-    /**
-     * Constructor for objects of class GroundTransportation
-     */
-    public GroundTransportation() {
-        setFees(FEES);
-    }
+    private int numberOfPallets;
+    private int trailers;
     
-    public GroundTransportation(String licensePlate) {
-        this();
-        this.licensePlate = licensePlate;
+    public Lorry(int numberOfPallets, int trailers) {
+        this.numberOfPallets = numberOfPallets;
+        this.trailers = trailers;
+        super.licensePlate = getLicensePlate();
     }
 
-    public String getLicensePlate() {
-        return licensePlate;
+    public int getNumberOfPallets() {
+        return numberOfPallets;
+    }
+    public int getTrailers() {
+        return trailers;
     }
     
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
+    public void setNumberOfPallets(int numberOfPallets) {
+        this.numberOfPallets = numberOfPallets;        
     }
-    
-    @Override
-    public double getPriceWithFees() {
-        return this.getPrice() + (this.getPrice() * this.getFees());
-    }
-    
-    public String getTransportType() {
-        return "Ground Transport";
+    public void setTrailers(int trailers) {
+        this.trailers = trailers;
     }
     
     @Override

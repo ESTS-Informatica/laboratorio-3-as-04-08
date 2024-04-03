@@ -9,18 +9,11 @@ public class AirTransportation extends Transport {
     private String name;
     private int numberOfContainers;
     private final double FEES = 0.04;
-
-    /**
-     * Constructor for objects of class AirTransportation
-     */
-    public AirTransportation() {
-        
-    }
     
     public AirTransportation(String name, int numberOfContainers) {
+        setFees(FEES);
         this.name = name;
         this.numberOfContainers = numberOfContainers;
-        super.setFees(FEES);
     }
 
     public String getName() {
