@@ -9,9 +9,9 @@ public class Van extends GroundTransportation
     
     private int packages;
     
-    public Van(int packages) {
+    public Van(int packages, String licensePlate) {
+        super(licensePlate);
         this.packages = packages;
-        licensePlate = getLicensePlate();
     }
 
     public int getPackages() {

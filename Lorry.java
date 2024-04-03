@@ -9,10 +9,10 @@ public class Lorry extends GroundTransportation {
     private int numberOfPallets;
     private int trailers;
     
-    public Lorry(int numberOfPallets, int trailers) {
+    public Lorry(int numberOfPallets, int trailers, String licensePlate) {
+        super(licensePlate);
         this.numberOfPallets = numberOfPallets;
         this.trailers = trailers;
-        super.licensePlate = getLicensePlate();
     }
 
     public int getNumberOfPallets() {

@@ -13,12 +13,8 @@ public class GroundTransportation extends Transport
     /**
      * Constructor for objects of class GroundTransportation
      */
-    public GroundTransportation() {
-        setFees(FEES);
-    }
-    
     public GroundTransportation(String licensePlate) {
-        this();
+        setFees(FEES);
         this.licensePlate = licensePlate;
     }
 
